@@ -2,11 +2,12 @@ package school.lemon.oop.comics.heros.marvel;
 
 import school.lemon.oop.comics.herosI.Hero;
 import school.lemon.oop.comics.powers.Acquired;
+import school.lemon.oop.comics.powers.Mutant;
 import school.lemon.oop.comics.powers.Skills;
 import school.lemon.oop.comics.powers.Suit;
 import school.lemon.oop.comics.villians.Villian;
 
-public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Villian, Acquired, Suit, Skills {
+public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Villian, Acquired, Suit, Skills, Mutant {
 
     private T1 hero;
 
@@ -74,5 +75,10 @@ public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Vill
         } else {
             singASonng();
         }
+    }
+
+    @Override
+    public void sayImMutant() {
+
     }
 }
