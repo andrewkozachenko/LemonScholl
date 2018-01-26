@@ -1,43 +1,41 @@
 package school.lemon.oop.comics;
 
+import school.lemon.oop.comics.heros.Hero;
+import school.lemon.oop.comics.heros.dc.justice.league.Batman;
+import school.lemon.oop.comics.heros.dc.justice.league.Superman;
+import school.lemon.oop.comics.heros.dc.justice.league.WonderWoman;
 import school.lemon.oop.comics.heros.marvel.DeadPool;
-import school.lemon.oop.comics.herosI.Hero;
-import school.lemon.oop.comics.villians.Villian;
+import school.lemon.oop.comics.heros.marvel.xmen.Wolverine;
+import school.lemon.oop.comics.villians.Loki;
 
 public class UseDeadPool {
     public static void main(String[] args) {
-        DeadPool deadPool = new DeadPool(new Hero() {
-            @Override
-            public void rescue() {
-                System.out.println("rescue All");
-            }
-        }, new Villian() {
-            @Override
-            public void makeBadThings() {
-                System.out.println("Kill everyone to Music ");
-            }
-        });
+        Superman superman = new Superman();
+        Batman batman = new Batman();
+
+        String s = "dfs";
+        Integer i = 123;
+       WonderWoman Diana = new WonderWoman();
+
+        DeadPool<Hero, Batman> deadPoolHeroDC = new DeadPool<Hero, Batman>(superman, batman);
+
+        DeadPool<WonderWoman, Batman> deadPoolDiana = new DeadPool<WonderWoman, Batman>(Diana, batman);
 
 
-        DeadPool goodDeadPool = new DeadPool(new Hero() {
-            @Override
-            public void rescue() {
-                System.out.println("rescue All");
-            }
-        }, null);
+        String d = "erer";
+        d = s;
 
 
-        DeadPool badAssDeadPool = new DeadPool(null, new Villian() {
-            @Override
-            public void makeBadThings() {
-                System.out.println("Kill everyone to Music ");
-            }
-        });
+//        deadPoolDiana = deadPoolHeroDC;
 
-        goodDeadPool.rescue();
-        goodDeadPool.useSuit();
-        badAssDeadPool.rescue();
-        deadPool.useSuit();
+        DeadPool rawDeadPool = new DeadPool();
+
+        rawDeadPool = deadPoolDiana;
+        rawDeadPool = deadPoolHeroDC;
+
+
+        rawDeadPool.<Superman>FFF(superman);
+
     }
 
 }

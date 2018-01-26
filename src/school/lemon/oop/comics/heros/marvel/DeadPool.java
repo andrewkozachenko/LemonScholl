@@ -5,14 +5,16 @@ import school.lemon.oop.comics.powers.Acquired;
 import school.lemon.oop.comics.powers.Mutant;
 import school.lemon.oop.comics.powers.Skills;
 import school.lemon.oop.comics.powers.Suit;
-import school.lemon.oop.comics.villians.Villian;
+import school.lemon.oop.comics.villians.Villain;
 
-public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Villian, Acquired, Suit, Skills, Mutant {
+public class DeadPool<T1 extends school.lemon.oop.comics.heros.Hero, T2> implements Hero, Villain, Acquired, Suit, Skills, Mutant {
 
     private T1 hero;
 
     private T2 villian;
 
+    public DeadPool() {
+    }
 
     public DeadPool(T1 hero, T2 villian) {
         this.hero = hero;
@@ -45,13 +47,9 @@ public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Vill
     @Override
     public void useSuit() {
 
-        if (hero != null && villian == null) {
-            hero.rescue();
-        } else if (villian != null && hero == null) {
-            villian.makeBadThings();
-        } else {
+
             singASonng();
-        }
+
 
     }
 
@@ -61,11 +59,9 @@ public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Vill
 
     @Override
     public void rescue() {
-        if (villian == null) {
-            System.out.println("Rescue people");
-        } else {
+
             singASonng();
-        }
+
     }
 
     @Override
@@ -80,5 +76,9 @@ public class DeadPool<T1 extends Hero, T2 extends Villian> implements Hero, Vill
     @Override
     public void sayImMutant() {
 
+    }
+
+    public <T1> void FFF(T1 t1){
+        System.out.println(t1.getClass());
     }
 }

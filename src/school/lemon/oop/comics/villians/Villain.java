@@ -1,5 +1,5 @@
 package school.lemon.oop.comics.villians;
 
-public interface Villian {
+public interface Villain {
     void makeBadThings();
 }

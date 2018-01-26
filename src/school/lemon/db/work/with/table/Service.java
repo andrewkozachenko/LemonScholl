@@ -106,7 +106,7 @@ public class Service {
         {
             Connection connection = getConnection();
             Statement statement = connection.createStatement();
-            ResultSet rs = statement.executeQuery("SELECT *  FROM users ORDER BY id");
+            ResultSet rs = statement.executeQuery("SELECT *  FROM public.users ");
             while ( rs.next() )
             {
                 User user = new User();
