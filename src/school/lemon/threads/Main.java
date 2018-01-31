@@ -7,7 +7,7 @@ class LemonRun implements Runnable{
 }
 
 class LemonRunThread extends Thread{
-    private String threadName;
+    private volatile String threadName;
     public LemonRunThread(String threadName){
         this.threadName = threadName;
     }
@@ -20,11 +20,11 @@ class LemonRunThread extends Thread{
 
 public class Main {
     public static void main(String[] args) {
-        final long before = System.currentTimeMillis();
-        for(int i =0; i < 5; i++){
-            (new LemonRunThread("LemonThread" + i)).start();
-        }
-        final long after = System.currentTimeMillis();
-        System.out.println("Time delta  : %d " + (after-before)/1000);
+      final long before = System.currentTimeMillis();
+      LemonRun lemonRun = new LemonRun();
+      Thread thread = new Thread(lemonRun);
+        thread.start();
+      final long after = System.currentTimeMillis();
+      System.out.println("Time delta  : %d " + (after-before));
     }
 }
