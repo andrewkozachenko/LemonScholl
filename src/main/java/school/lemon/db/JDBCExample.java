@@ -32,7 +32,12 @@ public class JDBCExample {
 
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://127.0.0.1:5432/lemon_school", "postgres",
-                    "postgres");
+                    "postgres");/**
+             lemon_school - это имя базы данных, вы подставляете свою
+             user:postgres - это имя пользователя вашей базыданных
+             password - собственно пароль ваше базы
+             */
+
 
             if (connection != null) {
                 System.out.println("You made it, take control your database now!");
