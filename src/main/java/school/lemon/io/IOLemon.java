@@ -6,12 +6,14 @@ public class IOLemon {
 
     private static final String path ="src/school/lemon/io/LemonSchool.txt";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ClassNotFoundException {
         String bullShit = "This is bull shit!";
 
 //        writeBullshit(bullShit, getFile(path));
         System.out.println("------------------------------");
-        serializeLemonSer(new LemonSer("Dmitriy ", "Bliznuk"), "LemonSer.dat");
+
+        //serializeLemonSer(new LemonSer("sdfas ", "asdf"), "LemonSer.dat");
+        deSerialize("LemonSer.dat");
         System.out.println("------------------------------");
 
     }
@@ -66,12 +68,29 @@ public class IOLemon {
     }
 
     private static class LemonSer implements Serializable{
+        private long serialVersionUID = 2;
         private String name;
         private transient String surmane;
 
         public LemonSer(String name, String surname){
             this.name = name;
             this.surmane = surname;
+        }
+
+        @Override
+        public String toString() {
+            return "field name = " + name + " \n" + "field surname = " + surmane;
+        }
+    }
+
+    private static void deSerialize(String path) throws ClassNotFoundException {
+        try(ObjectInputStream stream = new ObjectInputStream(new FileInputStream(getFile(path)))){
+            LemonSer ser = (LemonSer) stream.readObject();
+            System.out.println(ser.toString());
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
 
     }
