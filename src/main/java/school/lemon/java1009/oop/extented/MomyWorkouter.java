@@ -41,7 +41,6 @@ public class MomyWorkouter extends Workouter {
         System.out.println("Run -- Da nu nafig");
     }
 
-    @Override
     public void training(){
         makePhysicalExercise();
         flag();

@@ -4,5 +4,8 @@ public class Gym {
     public static void main(String[] args) {
         Sportsman workouter = new MomyWorkouter();
         workouter.makePhysicalExercise();
+        DadyBodyBuilder bodyBuilder = new DadyBodyBuilder();
+        bodyBuilder.makeDadyHappy();
     }
+
 }
