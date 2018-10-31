@@ -10,6 +10,10 @@ public class Example {
              ) {
             System.out.println(user);
         }
+
+//       User nikita = new User(828, "Nikita", "Nikita");
+//       Service.createUser(nikita);
+//        System.out.println(Service.getUserById(828));
 //        User user1488 = new User(1488, "kislyi", "limon");
 //        Service.createUser(user1488);
 //        Service.updateUserById(user123);
