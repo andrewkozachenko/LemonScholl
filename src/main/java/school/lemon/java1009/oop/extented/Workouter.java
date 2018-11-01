@@ -8,4 +8,8 @@ public abstract class Workouter extends Gymnast implements Nutritionist{
 
     //public abstract void training();
 
+    public void ask(){
+        System.out.println("method ask ");
+    }
+
 }

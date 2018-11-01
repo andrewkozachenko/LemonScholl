@@ -4,6 +4,7 @@ public class MomyWorkouter extends Workouter {
 
 
     public MomyWorkouter() {
+
         this.setAge(17);
         this.setHeight(178);
         this.setWeight(50);
@@ -13,6 +14,14 @@ public class MomyWorkouter extends Workouter {
     @Override
     void flag() {
         System.out.println("Made flag");
+    }
+
+    void flag(String color) {
+        System.out.println("Made flag");
+    }
+
+    void flag(String color, int size){
+        System.out.println();
     }
 
     @Override
@@ -37,8 +46,8 @@ public class MomyWorkouter extends Workouter {
 
     @Override
     public void run(int distance) {
-        super.run(distance);
         System.out.println("Run -- Da nu nafig");
+        super.run(distance);
     }
 
     public void training(){
@@ -48,5 +57,9 @@ public class MomyWorkouter extends Workouter {
         makeHorizon();
         swallow();
         makeDiet();
+    }
+
+    public void ask(String question){
+
     }
 }
