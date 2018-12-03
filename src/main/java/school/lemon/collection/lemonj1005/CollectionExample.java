@@ -9,7 +9,7 @@ public class CollectionExample {
 
 
     public static void main(String[] args) {
-        List arrayList = new ArrayList();
+        List<Student> arrayList = new ArrayList<>();
         Set hashSet = new HashSet();
         Map hashMap = new HashMap();
 //        Student s = new Student("David");

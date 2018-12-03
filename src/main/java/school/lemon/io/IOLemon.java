@@ -7,13 +7,12 @@ public class IOLemon {
     private static final String path ="src/school/lemon/io/LemonSchool.txt";
 
     public static void main(String[] args) throws ClassNotFoundException {
-        String bullShit = "This is bull shit!";
 
 //        writeBullshit(bullShit, getFile(path));
         System.out.println("------------------------------");
 
-        //serializeLemonSer(new LemonSer("sdfas ", "asdf"), "LemonSer.dat");
-        deSerialize("LemonSer.dat");
+        //serializeLemonSer(new LemonSer("Henry", "Ford"), "SerLemon.dat");
+        deSerialize("SerLemon.dat");
         System.out.println("------------------------------");
 
     }

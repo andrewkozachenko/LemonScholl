@@ -4,8 +4,11 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+class Beer{
 
-class GenericT<T extends Lesch,V>{
+}
+
+class GenericT<T extends Lesch,V extends Beer>{
 
     private T t;
     private V v;
@@ -49,14 +52,14 @@ public class GenericSample {
 
     public static void main(String[] args) {
 
-
-        //List<Integer> ll = new ArrayList<>();
-        //ll.add(45);
-
-
+//
+//        List<Integer> ll = new ArrayList<>();
+//        ll.add(45);
+//
+//
 //        ll.add("dfdf");
 
-        //GenericT<Plotva, Integer> g = new GenericT("23", 232);
+        GenericT<Plotva, Beer> g = new GenericT(new Plotva(), new Beer());
 
 
     }

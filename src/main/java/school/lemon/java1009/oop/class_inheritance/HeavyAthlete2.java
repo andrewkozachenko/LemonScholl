@@ -11,6 +11,8 @@ public class HeavyAthlete2 extends Athlete2 {
     public HeavyAthlete2(String name) {
         System.out.println("This is HeavyAthlete2");
     }
+
+
     {
         System.out.println("HeavyAthlete2 non static block 1");
     }

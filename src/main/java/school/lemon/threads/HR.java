@@ -1,3 +1,5 @@
+package school.lemon.threads;
+
 class PeopleQueue extends Thread    {// Наша очередь из сотрудников, наследник класса Thread
     private String[] names;
 
