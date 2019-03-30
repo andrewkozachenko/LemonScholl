@@ -1,18 +1,14 @@
-package school.lemon.collection;
+package school.lemon.java1101.collections;
 
-import java.util.*;
+import java.util.Collection;
+import java.util.Iterator;
+import java.util.List;
+import java.util.ListIterator;
 
-public class MyList implements List {
-
-    private ArrayList list;
-
-    public MyList() {
-        list = new ArrayList();
-    }
-
+public class MyArrayList implements List {
     @Override
     public int size() {
-        return list.size();
+        return 0;
     }
 
     @Override
@@ -22,8 +18,6 @@ public class MyList implements List {
 
     @Override
     public boolean contains(Object o) {
-
-
         return false;
     }
 
@@ -39,12 +33,12 @@ public class MyList implements List {
 
     @Override
     public boolean add(Object o) {
-        return list.add(o);
+        return false;
     }
 
     @Override
     public boolean remove(Object o) {
-        return true;
+        return false;
     }
 
     @Override

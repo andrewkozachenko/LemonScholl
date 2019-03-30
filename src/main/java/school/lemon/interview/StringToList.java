@@ -1,9 +1,9 @@
-package interview;
+package school.lemon.interview;
 
 import java.util.LinkedList;
 import java.util.List;
 
-public class StringToIntegerArray {
+class StringToIntegerArray {
 
     public static List<Integer> getIntegerList(String input){
         StringBuilder firstPart =
