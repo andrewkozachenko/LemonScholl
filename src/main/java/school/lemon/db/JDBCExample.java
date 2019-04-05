@@ -19,6 +19,7 @@ public class JDBCExample {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection("jdbc:postgresql://127.0.0.1:5432/lemon_school", "postgres", "postgres");
+//            connection = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/lemon_school?serverTimezone=UTC", "user", "lemonschool"); // for MySQL users
             if (connection != null) {
                 System.err.println("You made it, take control your database now!");
             } else {
